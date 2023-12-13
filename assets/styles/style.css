@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+
+:root{
+    --monserrat: 'Monserrat';
+    --white: #FFFFFF;
+    --background: #060e1b;
+    --grey:  rgba(235, 235, 245, 0.60);
+    --purple: #48319D;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--monserrat);
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--white);
+
+    background: var(--background);
+    overflow: hidden;
+
+    width: 100vw;
+    height: 100vh;
+}
+
+canvas {
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchField{
+    font-family: var(--monserrat);
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: var(--white);
+
+    background-color: transparent;
+    background-image: url(../images/searchIcon.svg);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-origin: content-box;
+
+    border: 1px solid var(--grey);
+    border-radius: 0.6rem;
+    text-decoration: none;
+
+    margin-top: 1rem;
+    padding: 0.5rem 2rem;
+}
+
+.searchField:active{
+    border-color: var(--purple);
+    cursor: pointer;
+}
+
+.WeatherContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding: 5rem;
+}
+
+.WeatherContent__city,
+.WeatherContent__degrees,
+.WeatherContent__weather,
+.WeatherContent__minAndMax{
+    letter-spacing: 0.1rem;
+}
+
+.WeatherContent__city{
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.WeatherContent__degrees{
+    font-weight: 100;
+    font-size: 4.5rem;
+    line-height: 4rem; 
+}
+
+.WeatherContent__weather{
+    color: var(--grey);
+    font-size: 0.8rem;
+    line-height: 1rem;
+}
+
+.WeatherContent__weather span{
+    color: var(--white);
+}
