@@ -13,20 +13,31 @@
     <body>
         <canvas id="canvas"></canvas>
         <div class="main"> 
-            <div class="searchContainer">
+            <section class="searchContainer">
                 <input class="searchInput" id="searchInput" type="text" placeholder="Buscar uma cidade" />
                 <button id="searchButton">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
-            </div>
+            </section>
 
-            <div class="WeatherContent" id="WeatherC=content">
+            <section class="WeatherContent" id="WeatherC=content">
                 <h3 class="WeatherContent__city">São Paulo</h3>
                 <h2 class="WeatherContent__degrees">19º</h2>
                 <p class="WeatherContent__weather">Parcialmente nublado <br><span>Max:23º  Min: 18º</span></p>
-            </div>
+            </section>
+
+            <section class="modal">
+                <div class="segmentControl">
+                    <div class="todayForecast">
+                        <a href="#">Previsão para hoje</a>
+                    </div>
+                    <div class="weeklyForecast">
+                        <a href="#">Previsão Semanal</a>
+                    </div>
+                </div>
+            </section>
         </div>
-        
+
         <script src="./assets/scripts/canvas.js" type="module" defer></script>
     </body>
 </html>
