@@ -27,44 +27,47 @@ body {
     height: 100vh;
 }
 
+
 canvas {
     opacity: 0.5;
-    position: absolute;
-    top: 0;
-    left: 0;
+    position:absolute;
+    top:0;
+    left:0;
 }
 
 .main{
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.searchField{
-    font-family: var(--monserrat);
-    font-weight: 400;
-    font-size: 0.8rem;
-    color: var(--white);
-
-    background-color: transparent;
-    background-image: url(../images/searchIcon.svg);
-    background-repeat: no-repeat;
-    background-position: right center;
-    background-origin: content-box;
-
+.searchContainer{
     border: 1px solid var(--grey);
     border-radius: 0.6rem;
-    text-decoration: none;
-
     margin-top: 1rem;
     padding: 0.5rem 2rem;
 }
 
-.searchField:active{
+.searchContainer:hover,
+.searchContainer:focus,
+.searchContainer:active{
     border-color: var(--purple);
-    cursor: pointer;
+    box-shadow: 0 0.5em 0.5em -0.4em var(--purple);
+    transform: translateY(-0.25em);
 }
+
+.searchInput{
+    font-family: var(--monserrat);
+    font-weight: 400;
+    color: var(--white);
+    background-color: transparent;
+}
+
+.fa-solid{
+    color: var(--grey);
+} 
 
 .WeatherContent{
     display: flex;
