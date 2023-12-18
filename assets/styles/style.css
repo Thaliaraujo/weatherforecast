@@ -91,6 +91,13 @@ canvas {
     line-height: 2rem;
 }
 
+.WeatherContent__city{
+    background-image: url("https://flagsapi.com/BR/flat/24.png");
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding-right: 2rem;
+}
+
 .WeatherContent__degrees{
     font-weight: 100;
     font-size: 4.5rem;
@@ -126,8 +133,6 @@ canvas {
 
 .segmentTitle{
     color: var(--grey);
-    text-align: right;
-    font-size: 0.9375rem;
     line-height: 1.25rem;
     letter-spacing: -0.03125rem;
 }
