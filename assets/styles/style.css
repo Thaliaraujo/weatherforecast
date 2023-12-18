@@ -104,14 +104,16 @@ canvas {
     line-height: 4rem; 
 }
 
-.WeatherContent__weather{
+.WeatherContent__weather,
+.maxAndMin{
     color: var(--grey);
     font-size: 0.8rem;
     line-height: 1rem;
 }
 
-.WeatherContent__weather span{
+.maxAndMin span{
     color: var(--white);
+    padding-right: 1rem;
 }
 
 .modal{
