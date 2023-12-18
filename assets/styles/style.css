@@ -114,3 +114,20 @@ canvas {
     border-radius: 2.75rem;
     background: linear-gradient(168deg, rgba(46, 51, 90, 0.26) -4.68%, rgba(28, 27, 51, 0.26) 95.45%);
 }
+
+.segmentControl{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1rem 0 0 1.2rem;
+    gap: 3rem;
+}
+
+.segmentText{
+    color: var(--grey);
+    text-align: right;
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
+    letter-spacing: -0.03125rem;
+}
