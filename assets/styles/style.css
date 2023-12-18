@@ -124,10 +124,49 @@ canvas {
     gap: 3rem;
 }
 
-.segmentText{
+.segmentTitle{
     color: var(--grey);
     text-align: right;
     font-size: 0.9375rem;
     line-height: 1.25rem;
     letter-spacing: -0.03125rem;
+}
+
+.segmentList{
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+}
+
+.segmentItem{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 0.5rem;
+}
+
+.segmentItem__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 3.7rem;
+    padding: 1rem 0.5rem;
+    gap: 1rem;
+
+    border-radius: 1.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    background: rgba(72, 49, 157, 0.20);
+    box-shadow: 5px 4px 10px 0px rgba(0, 0, 0, 0.25), 1px 1px 0px 0px rgba(255, 255, 255, 0.25) inset;
+}
+
+.segmentItem__container p {
+    font-size: 0.9rem;
+    line-height: 1.25rem; 
+    letter-spacing: -0.03125rem;
+}
+
+.segmentItem__container img {
+    width: 2rem;
 }
