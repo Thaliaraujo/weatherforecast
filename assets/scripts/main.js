@@ -1,6 +1,11 @@
 // Variáveis e seleção de elementos
+<<<<<<< HEAD
 const apiKey = 'c93c1f54b865a94eec32533acaccfb1e';
 const apiCountryURL = 'https://flagsapi.com/';
+=======
+const apiKey = '';
+const apiCountryURL = 'https://countryflagsapi.com/png'
+>>>>>>> eb570075ac2d078f5909f47760a9c1e7b41d9ffa
 
 const searchInput = document.querySelector('#searchInput');
 const searchButton = document.querySelector('#searchButton');
