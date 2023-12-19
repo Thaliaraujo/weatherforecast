@@ -79,6 +79,17 @@ canvas {
     padding: 5rem;
 }
 
+.WeatherContent__description,
+.WeatherContent__container{
+    display: flex;
+    align-items: center;
+    margin: .5rem 0;
+}
+
+.WeatherContent__description img{
+    width: 2rem;
+}
+
 .WeatherContent__city,
 .WeatherContent__degrees,
 .WeatherContent__weather,
@@ -86,16 +97,10 @@ canvas {
     letter-spacing: 0.1rem;
 }
 
+
 .WeatherContent__city{
     font-size: 1.5rem;
     line-height: 2rem;
-}
-
-.WeatherContent__city{
-    background-image: url("https://flagsapi.com/BR/flat/24.png");
-    background-repeat: no-repeat;
-    background-position: right center;
-    padding-right: 2rem;
 }
 
 .WeatherContent__degrees{
@@ -109,6 +114,7 @@ canvas {
     color: var(--grey);
     font-size: 0.8rem;
     line-height: 1rem;
+    text-transform: capitalize;
 }
 
 .maxAndMin span{

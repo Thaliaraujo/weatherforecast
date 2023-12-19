@@ -20,10 +20,16 @@
                 </button>
             </section>
 
-            <section class="WeatherContent" id="WeatherC=content">
-                <h3 class="WeatherContent__city" id="city"></h3>
+            <section class="weatherContent">
+                <div class="weatherContent__container">
+                    <h3 class="WeatherContent__city" id="city"></h3>
+                    <img class="WeatherContent__country" id="countryIcon" src=""/>
+                </div>
                 <h2 class="WeatherContent__degrees" id="temperature"></h2>
-                <p class="WeatherContent__weather" id="description"></p>
+                <div class="WeatherContent__description">
+                    <p class="WeatherContent__weather" id="description"></p>
+                    <img id="weatherIcon" src=""/>
+                </div>
                 <p class="maxAndMin"><span id="tempMax"></span><span id="tempMin"></span></p>
             </section>
 

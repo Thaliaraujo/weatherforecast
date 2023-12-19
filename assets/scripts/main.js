@@ -1,14 +1,16 @@
 // Variáveis e seleção de elementos
 const apiKey = 'c93c1f54b865a94eec32533acaccfb1e';
-const apiCountryURL = 'https://countryflagsapi.com/png'
+const apiCountryURL = 'https://flagsapi.com/';
 
 const searchInput = document.querySelector('#searchInput');
 const searchButton = document.querySelector('#searchButton');
 
 const cityElement = document.querySelector('#city');
+const countryIconElement = document.querySelector('#countryIcon')
 const tempElement = document.querySelector('#temperature');
 const tempMaxElement = document.querySelector('#tempMax');
 const tempMinElement = document.querySelector('#tempMin');
+const weatherIconElement = document.querySelector('#weatherIcon');
 let descriptionElement = document.querySelector('#description');
 
 //Funções
@@ -25,10 +27,12 @@ const showWeatherData = async (city) => {
     const data = await getWeatherData(city);
 
     cityElement.innerText = data.name;
-    tempElement.innerHTML = parseInt(data.main.temp);
-    descriptionElement = data.weather[0]
-    tempMaxElement.innerHTML = ("Max: " + parseInt(data.main.temp_max) + " º");
-    tempMinElement.innerHTML = ("Min: " + parseInt(data.main.temp_min) + " º");
+    countryIconElement.setAttribute('src', `${apiCountryURL}${data.sys.country}/flat/24.png`);
+    tempElement.innerText = (parseInt(data.main.temp) + 'º');
+    descriptionElement.innerText = data.weather[0].description;
+    tempMaxElement.innerText = ('Max: ' + parseInt(data.main.temp_max) + ' º');
+    tempMinElement.innerText = ('Min: ' + parseInt(data.main.temp_min) + ' º');
+    weatherIconElement.setAttribute('src', `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`);
 };
 
 //Eventos
