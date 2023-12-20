@@ -1,0 +1,25 @@
+.searchContainer{
+    border: 1px solid var(--grey);
+    border-radius: .6rem;
+    margin-top: 1rem;
+    padding: .5rem 2rem;
+}
+
+.searchContainer:hover,
+.searchContainer:focus,
+.searchContainer:active{
+    border-color: var(--purple);
+    box-shadow: 0 0.5em 0.5em -0.4em var(--purple);
+    transform: translateY(-0.25em);
+}
+
+.searchContainer--input{
+    font-family: var(--monserrat);
+    font-weight: 400;
+    color: var(--white);
+    background-color: transparent;
+}
+
+.fa-solid{
+    color: var(--grey);
+} 

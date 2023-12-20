@@ -30,8 +30,8 @@ const showWeatherData = async (city) => {
     countryIconElement.setAttribute('src', `${apiCountryURL}${data.sys.country}/flat/24.png`);
     tempElement.innerText = (parseInt(data.main.temp) + 'º');
     descriptionElement.innerText = data.weather[0].description;
-    tempMaxElement.innerText = ('Max: ' + parseInt(data.main.temp_max) + ' º');
-    tempMinElement.innerText = ('Min: ' + parseInt(data.main.temp_min) + ' º');
+    tempMaxElement.innerText = ('Max: ' + parseInt(data.main.temp_max) + 'º ');
+    tempMinElement.innerText = ('Min: ' + parseInt(data.main.temp_min) + 'º');
     weatherIconElement.setAttribute('src', `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`);
 };
 

@@ -1,0 +1,10 @@
+.canvasContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Defina um valor de z-index para o container do canvas */
+}
+
+canvas {
+    opacity: 0.5;
+}

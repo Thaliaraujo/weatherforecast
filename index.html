@@ -11,64 +11,55 @@
         <title>Weather Forecast</title>
     </head>
     <body>
-        <canvas id="canvas"></canvas>
+        <div class="canvasContainer">
+            <canvas id="canvas"></canvas>
+        </div>
         <div class="main"> 
             <section class="searchContainer">
-                <input class="searchInput" id="searchInput" type="text" placeholder="Buscar uma cidade" />
+                <input class="searchContainer--input" id="searchInput" type="text" placeholder="Busque por uma cidade..." />
                 <button id="searchButton">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
             </section>
 
-            <section class="weatherContent">
-                <div class="weatherContent__container">
-                    <h3 class="WeatherContent__city" id="city"></h3>
-                    <img class="WeatherContent__country" id="countryIcon" src=""/>
+            <section class="weatherContainer">
+                <div class="weatherContainer__cityAndCountry">
+                    <h3 class="weatherContainer__cityAndCountry--city" id="city"></h3>
+                    <img id="countryIcon" src=""/>
                 </div>
-                <h2 class="WeatherContent__degrees" id="temperature"></h2>
-                <div class="WeatherContent__description">
-                    <p class="WeatherContent__weather" id="description"></p>
+
+                <h2 class="weatherContainer--temperature" id="temperature"></h2>
+
+                <div class="weatherContainer__descriptionAndIcon">
+                    <p class="weatherContainer__descriptionAndIcon--description" id="description"></p>
                     <img id="weatherIcon" src=""/>
                 </div>
-                <p class="maxAndMin"><span id="tempMax"></span><span id="tempMin"></span></p>
+
+                <p class="weatherContainer__maxAndMin"><span id="tempMax"></span><span id="tempMin"></span></p>
             </section>
 
-            <section class="modal">
+            <section class="modalContainer">
                 <div class="segmentControl">
                     <div>
-                        <h3 class="segmentTitle">Previsão para hoje</h3>
-                            <ul class="segmentList">
-                                <li class="segmentItem">
-                                    <div class="segmentItem__container">
-                                        <p>6 am</p>
-                                        <img src="https://openweathermap.org/img/wn/02d.png" alt="Condição do tempo" />
-                                        <p>19°</p>
-                                    </div>
-                                </li>
-                                <li class="segmentItem">
-                                    <div class="segmentItem__container">
-                                        <p>7 am</p>
-                                        <img src="https://openweathermap.org/img/wn/02d.png" alt="Condição do tempo" />
-                                        <p>21°</p>
-                                    </div>
-                                </li>
-                            </ul>
+                        <h3 class="segmentControl--title">Previsão para hoje</h3>
+                        <ul class="segmentControl__list">
+                            <li class="segmentControl__item">
+                                <div class="segmentControl__item--content">
+                                    <p>6 am</p>
+                                    <img src="https://openweathermap.org/img/wn/02d.png" alt="Condição do tempo" />
+                                    <p>19°</p>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                     <div>
-                        <h3 class="segmentTitle">Previsão Semanal</h3>
-                        <ul class="segmentList">
-                            <li class="segmentItem">
-                                <div class="segmentItem__container">
+                        <h3 class="segmentControl--title">Previsão Semanal</h3>
+                        <ul class="segmentControl__list">
+                            <li class="segmentControl__item">
+                                <div class="segmentControl__item--content">
                                     <p>Seg</p>
                                     <img src="https://openweathermap.org/img/wn/02d.png" alt="Condição do tempo" />
                                     <p>22°</p>
-                                </div>
-                            </li>
-                            <li class="segmentItem">
-                                <div class="segmentItem__container">
-                                    <p>Ter</p>
-                                    <img src="https://openweathermap.org/img/wn/02d.png" alt="Condição do tempo" />
-                                    <p>20°</p>
                                 </div>
                             </li>
                         </ul>

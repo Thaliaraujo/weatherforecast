@@ -1,0 +1,61 @@
+.modalContainer{
+    width: 95vw;
+    height: 50vh;
+    flex-shrink: 0;
+    border-radius: 2.75rem;
+    background: linear-gradient(168deg, rgba(46, 51, 90, 0.26) -4.68%, rgba(28, 27, 51, 0.26) 95.45%);
+}
+
+.segmentControl{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1rem 0 0 1.2rem;
+    gap: 3rem;
+}
+
+.segmentControl--title{
+    color: var(--grey);
+    line-height: 1.25rem;
+    letter-spacing: -0.03125rem;
+}
+
+.segmentControl__list{
+    display: flex;
+    align-items: flex-start;
+    gap: .75rem;
+}
+
+.segmentControl__item{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: .5rem;
+}
+
+.segmentControl__item--content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 3.7rem;
+    padding: 1rem .5rem;
+    gap: 1rem;
+
+    border-radius: 1.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    background: rgba(72, 49, 157, 0.20);
+    box-shadow: 5px 4px 10px 0px rgba(0, 0, 0, 0.25), 1px 1px 0px 0px rgba(255, 255, 255, 0.25) inset;
+}
+
+.segmentControl__item--content p {
+    font-size: .9rem;
+    line-height: 1.25rem; 
+    letter-spacing: -0.03125rem;
+}
+
+.segmentControl__item--content img {
+    width: 2rem;
+}

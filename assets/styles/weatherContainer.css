@@ -1,0 +1,47 @@
+.weatherContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding: 5rem;
+}
+
+.weatherContainer__cityAndCountry,
+.weatherContainer__descriptionAndIcon{
+    display: flex;
+    align-items: center;
+    margin: .5rem 0;
+}
+
+.weatherContainer__cityAndCountry--city,
+.weatherContainer--temperature,
+.weatherContainer__descriptionAndIcon--description,
+.weatherContainer__minAndMax{
+    letter-spacing: 0.1rem;
+}
+
+
+.weatherContainer__cityAndCountry--city{
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.weatherContainer--temperature{
+    font-weight: 100;
+    font-size: 4rem;
+    line-height: 4rem; 
+}
+
+.weatherContainer__descriptionAndIcon--description,
+.weatherContainer__minAndMax{
+    color: var(--grey);
+    font-size: 0.8rem;
+    line-height: 1rem;
+    text-transform: capitalize;
+}
+
+.weatherContainer__minAndMax span{
+    color: var(--white);
+}
