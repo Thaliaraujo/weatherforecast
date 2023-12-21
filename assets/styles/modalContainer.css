@@ -2,8 +2,6 @@
     width: 95vw;
     height: 50vh;
     flex-shrink: 0;
-    border-radius: 2.75rem;
-    background: linear-gradient(168deg, rgba(46, 51, 90, 0.26) -4.68%, rgba(28, 27, 51, 0.26) 95.45%);
 }
 
 .segmentControl{
@@ -58,4 +56,78 @@
 
 .segmentControl__item--content img {
     width: 2rem;
+}
+
+.modalContainer__widgets{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    gap: 1rem;
+}
+
+.modalContainer__widgets--item{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    width: 7.5rem;
+    height: 7.5rem;
+    padding-top: .5rem;
+    gap: 1rem;
+    
+    border-radius: 1.4rem;
+    border: 1px solid var(--purple);
+    background: linear-gradient(168deg, #2E335A 1.62%, #1C1B33 95.72%);
+    box-shadow: -40px 60px 150px 0px rgba(59, 38, 123, 0.70);
+}
+
+.modalContainer__widgets--itemTitle{
+    color: var(--grey);
+    font-size: .7rem;
+    line-height: 1rem;
+    letter-spacing: .1rem;
+
+    background-repeat: no-repeat;
+    background-position: bottom;
+    padding-bottom: 1.5rem;
+}
+
+.feels{
+    background-image: url(../images/feels-like.svg);
+}
+
+.sunrise{
+    background-image: url(../images/sunrise-fill.svg); 
+}
+
+.sunset{
+    color: var(--white);
+    font-size: .5rem;
+    letter-spacing: .1rem;
+}
+
+.rain{
+    background-image: url(../images/rain-fill.svg); 
+}
+
+.humidity{
+    background-image: url(../images/humidity-fill.svg); 
+}
+
+.cloudiness{
+    background-image: url(../images/cloud-haze-fill.svg); 
+}
+
+.wind{
+    background-image: url(../images/wind-fill.svg); 
+}
+
+.modalContainer__widgets--itemParameter{
+    font-weight: 100;
+    line-height: 1rem;
+    letter-spacing: .1rem;
 }

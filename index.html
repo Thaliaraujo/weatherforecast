@@ -22,24 +22,24 @@
                 </button>
             </section>
 
-            <section class="weatherContainer">
+            <section class="weatherContainer hide" id="weatherData">
                 <div class="weatherContainer__cityAndCountry">
                     <h3 class="weatherContainer__cityAndCountry--city" id="city"></h3>
-                    <img id="countryIcon" src=""/>
+                    <img id="countryIcon" src="" alt="Bandeira do País"/>
                 </div>
 
                 <h2 class="weatherContainer--temperature" id="temperature"></h2>
 
                 <div class="weatherContainer__descriptionAndIcon">
                     <p class="weatherContainer__descriptionAndIcon--description" id="description"></p>
-                    <img id="weatherIcon" src=""/>
+                    <img id="weatherIcon" src="" alt="Condição do clima"/>
                 </div>
 
                 <p class="weatherContainer__maxAndMin"><span id="tempMax"></span><span id="tempMin"></span></p>
             </section>
 
-            <section class="modalContainer">
-                <div class="segmentControl">
+            <section class="modalContainer hide" id="modalData">
+                <!-- <div class="segmentControl">
                     <div>
                         <h3 class="segmentControl--title">Previsão para hoje</h3>
                         <ul class="segmentControl__list">
@@ -64,7 +64,35 @@
                             </li>
                         </ul>
                     </div>
-                </div>
+                </div> -->
+                
+                <ul class="modalContainer__widgets">
+                    <li class="modalContainer__widgets--item">
+                        <h3 class="modalContainer__widgets--itemTitle feels">Sensação Térmica</h3>
+                        <h2 class="modalContainer__widgets--itemParameter" id="feels"></h2>
+                    </li>
+                    <li class="modalContainer__widgets--item">
+                        <h3 class="modalContainer__widgets--itemTitle sunrise">Nascer do Sol</h3>
+                        <h2 class="modalContainer__widgets--itemParameter" id="sunrise"></h2>
+                        <h3 class="sunset" id="sunset"></h3>
+                    </li>
+                    <li class="modalContainer__widgets--item">
+                        <h3 class="modalContainer__widgets--itemTitle rain">Chuva</h3>
+                        <h2 class="modalContainer__widgets--itemParameter" id="rain">80mm</h2>
+                    </li>
+                    <li class="modalContainer__widgets--item">
+                        <h3 class="modalContainer__widgets--itemTitle humidity">Humidade</h3>
+                        <h2 class="modalContainer__widgets--itemParameter" id="humidity">80%</h2>
+                    </li>
+                    <li class="modalContainer__widgets--item">
+                        <h3 class="modalContainer__widgets--itemTitle cloudiness">Nebulosidade</h3>
+                        <h2 class="modalContainer__widgets--itemParameter" id="cloudiness">10%</h2>
+                    </li>
+                    <li class="modalContainer__widgets--item">
+                        <h3 class="modalContainer__widgets--itemTitle wind">Velocidade <br> do Vento</h3>
+                        <h2 class="modalContainer__widgets--itemParameter" id="wind">10km/h</h2>
+                    </li>
+                </ul>
             </section>
         </div>
 
