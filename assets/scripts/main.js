@@ -1,5 +1,9 @@
+import { getWeatherData } from './api.js';
+import {getTime}  from './module.js'
+import { getDate } from './module.js';
+import { getHours } from './module.js';
+
 // Variáveis e seleção de elementos
-const apiKey = 'c93c1f54b865a94eec32533acaccfb1e';
 const apiCountryURL = 'https://flagsapi.com/';
 
 const searchInput = document.querySelector('#searchInput');
@@ -24,24 +28,6 @@ const windElement = document.querySelector('#wind');
 let descriptionElement = document.querySelector('#description');
 
 //Funções
-const getWeatherData = async(city) => {
-    const apiWeatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}&lang=pt_br`;
-
-    const res = await fetch(apiWeatherURL);
-    const data = await res.json();
-
-    return data;
-};
-
-//Função para converter timestamp em hora e minutos
-const getTime = (timeUnix, timeZone) => {
-    const date = new Date((timeUnix + timeZone) * 1000);
-    const hours = date.getUTCHours();
-    const minutes = date.getUTCMinutes();
-    const period = hours >= 12 ? 'PM' : 'AM';
-
-    return `${hours % 12 || 12}:${minutes < 10 ? '0' : ''}${minutes} ${period}`;
-};
 
 const showWeatherData = async (city) => {
     const data = await getWeatherData(city);

@@ -39,10 +39,10 @@
             </section>
 
             <section class="modalContainer hide" id="modalData">
-                <!-- <div class="segmentControl">
+                <div class="segmentControl">
                     <div>
                         <h3 class="segmentControl--title">Previsão para hoje</h3>
-                        <ul class="segmentControl__list">
+                        <ul class="segmentControl__list" id="dailyForecast">
                             <li class="segmentControl__item">
                                 <div class="segmentControl__item--content">
                                     <p>6 am</p>
@@ -54,49 +54,54 @@
                     </div>
                     <div>
                         <h3 class="segmentControl--title">Previsão Semanal</h3>
-                        <ul class="segmentControl__list">
+                        <ul class="segmentControl__list" id="weeklyForecast">
                             <li class="segmentControl__item">
                                 <div class="segmentControl__item--content">
-                                    <p>Seg</p>
+                                    <p id="weekDay">Seg</p>
                                     <img src="https://openweathermap.org/img/wn/02d.png" alt="Condição do tempo" />
                                     <p>22°</p>
                                 </div>
                             </li>
                         </ul>
                     </div>
-                </div> -->
+                </div>
                 
                 <ul class="modalContainer__widgets">
                     <li class="modalContainer__widgets--item">
                         <h3 class="modalContainer__widgets--itemTitle feels">Sensação Térmica</h3>
                         <h2 class="modalContainer__widgets--itemParameter" id="feels"></h2>
                     </li>
+
                     <li class="modalContainer__widgets--item">
                         <h3 class="modalContainer__widgets--itemTitle sunrise">Nascer do Sol</h3>
                         <h2 class="modalContainer__widgets--itemParameter" id="sunrise"></h2>
                         <h3 class="sunset" id="sunset"></h3>
                     </li>
+
                     <li class="modalContainer__widgets--item">
                         <h3 class="modalContainer__widgets--itemTitle rain">Chuva</h3>
-                        <h2 class="modalContainer__widgets--itemParameter" id="rain">80mm</h2>
+                        <h2 class="modalContainer__widgets--itemParameter" id="rain"></h2>
                     </li>
+
                     <li class="modalContainer__widgets--item">
                         <h3 class="modalContainer__widgets--itemTitle humidity">Humidade</h3>
-                        <h2 class="modalContainer__widgets--itemParameter" id="humidity">80%</h2>
+                        <h2 class="modalContainer__widgets--itemParameter" id="humidity"></h2>
                     </li>
+
                     <li class="modalContainer__widgets--item">
                         <h3 class="modalContainer__widgets--itemTitle cloudiness">Nebulosidade</h3>
-                        <h2 class="modalContainer__widgets--itemParameter" id="cloudiness">10%</h2>
+                        <h2 class="modalContainer__widgets--itemParameter" id="cloudiness"></h2>
                     </li>
+
                     <li class="modalContainer__widgets--item">
                         <h3 class="modalContainer__widgets--itemTitle wind">Velocidade <br> do Vento</h3>
-                        <h2 class="modalContainer__widgets--itemParameter" id="wind">10km/h</h2>
+                        <h2 class="modalContainer__widgets--itemParameter" id="wind"></h2>
                     </li>
                 </ul>
             </section>
         </div>
 
         <script src="./assets/scripts/canvas.js" type="module" defer></script>
-        <script src="./assets/scripts/main.js"></script>
+        <script src="./assets/scripts/main.js" type="module"></script>
     </body>
 </html>
