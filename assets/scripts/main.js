@@ -73,7 +73,7 @@ const showForecastData = async (city) => {
 const showDailyForecastData = async (city) => {
     const data = await getForecastData(city);
     
-    const dailyForecast = data.list.filter((index) => index % 8 === 0);
+    const dailyForecast = data.list.filter((dailyData,index) => index % 8 === 0);
     dailyForecastElement.innerHTML = '';
 
     dailyForecast.forEach((dailyData) => {
