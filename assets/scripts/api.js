@@ -8,3 +8,14 @@ export const getWeatherData = async(city) => {
 
     return data;
 };
+
+
+export const getForecastData = async (city) => {
+    const apiForecastURL = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${apiKey}&lang=pt_br`;
+  
+    const res = await fetch(apiForecastURL);
+    const data = await res.json();
+  
+    return data;
+};
+  
