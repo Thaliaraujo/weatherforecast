@@ -1,13 +1,12 @@
 .searchContainer{
+    display: flex;
+    justify-content: space-around;
     border: 1px solid var(--grey);
     border-radius: .6rem;
-    margin-top: 1rem;
-    padding: .5rem 2rem;
+    margin-top: 1.5rem;
 }
 
-.searchContainer:hover,
-.searchContainer:focus,
-.searchContainer:active{
+.searchContainer:is(:hover, :focus, :active) {
     border-color: var(--purple);
     box-shadow: 0 0.5em 0.5em -0.4em var(--purple);
     transform: translateY(-0.25em);
@@ -18,8 +17,28 @@
     font-weight: 400;
     color: var(--white);
     background-color: transparent;
+    padding: .5rem 2rem;
 }
 
 .fa-solid{
     color: var(--grey);
+    padding-right: 1rem;
 } 
+
+@media screen and (min-width: 768px) {
+    .searchContainer--input{
+        font-size: 1.5rem;
+        width: 70vw;
+    }
+
+    .fa-solid{
+        padding-right: 1.5rem;
+    } 
+}
+
+@media screen and (min-width: 1024px) {
+    .searchContainer--input{
+        font-size: 1.5rem;
+        max-width: 700px;
+    }
+}
