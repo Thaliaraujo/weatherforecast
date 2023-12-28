@@ -42,6 +42,7 @@ export const getTime = (timeUnix, timeZone) => {
     return `${hours % 12 || 12}:${minutes < 10 ? '0' : ''}${minutes} ${period}`;
 };
 
+//Função para converter timestamp em hora
 export const getHours = (timeUnix, timeZone) => {
     const date = new Date((timeUnix + timeZone) * 1000);
     const hours = date.getUTCHours();

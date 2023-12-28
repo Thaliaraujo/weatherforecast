@@ -47,7 +47,7 @@ const showWeatherData = async (city) => {
 const showForecastData = async (city) => {
     const data = await getForecastData(city);
   
-    const hourlyForecast = data.list.slice(0, 8); // Considerando as próximas 8 entradas
+    const hourlyForecast = data.list.slice(0, 5); // Considerando as próximas 8 entradas
     hourlyForecastElement.innerHTML = ''; 
   
     hourlyForecast.forEach((hourlyData) => {
@@ -116,7 +116,14 @@ const showParametersData = async (city) => {
     windElement.innerHTML = `${parseInt(data.wind.speed)}m/s`;
 };
 
+// Função para carregar automaticamente os dados da cidade de São Paulo
+const loadDefaultCityData = async () => {
+    const defaultCity = 'São Paulo';
+    searchInput.value = defaultCity;
+    searchButton.click();
+};
 
+  
 //Eventos
 searchButton.addEventListener('click', (e) => {
     e.preventDefault();
@@ -128,3 +135,7 @@ searchButton.addEventListener('click', (e) => {
     showDailyForecastData(city);
     showParametersData(city);
 });
+
+window.addEventListener('load', loadDefaultCityData);
+
+  
