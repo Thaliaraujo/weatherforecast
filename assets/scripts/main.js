@@ -116,26 +116,61 @@ const showParametersData = async (city) => {
     windElement.innerHTML = `${parseInt(data.wind.speed)}m/s`;
 };
 
-// Função para carregar automaticamente os dados da cidade de São Paulo
-const loadDefaultCityData = async () => {
-    const defaultCity = 'São Paulo';
-    searchInput.value = defaultCity;
-    searchButton.click();
-};
+// Exibir cidade padrão ou última cidade buscada pelo usúario
+const loadCityData = async () => {
+    try {
+        // Recuperar a lista de cidades buscadas do localStorage
+        const storedCities = JSON.parse(localStorage.getItem('searchedCities')) || [];
 
+        if (storedCities.length > 0) {
+            // Se houver cidades armazenadas, retorne a última cidade da lista
+            const lastSearchedCity = storedCities[storedCities.length - 1];
+            searchInput.value = lastSearchedCity;
+            await showWeatherData(lastSearchedCity);
+            showForecastData(lastSearchedCity);
+            showDailyForecastData(lastSearchedCity);
+            showParametersData(lastSearchedCity);
+        } else {
+            // Se não houver cidades armazenadas, utiliza a padrão
+            const defaultCity = 'Sao Paulo';
+            searchInput.value = defaultCity;
+            await showWeatherData(defaultCity);
+            showForecastData(defaultCity);
+            showDailyForecastData(defaultCity);
+            showParametersData(defaultCity);
+            storedCities.push(defaultCity);
+            localStorage.setItem('searchedCities', JSON.stringify(storedCities));
+        }
+    } catch (error) {
+        console.error('Erro ao obter ou mostrar dados da cidade:', error);
+    };
+};
   
+
 //Eventos
-searchButton.addEventListener('click', (e) => {
+searchButton.addEventListener('click', async (e) => {
     e.preventDefault();
 
     const city = searchInput.value;
 
-    showWeatherData(city);
+    await showWeatherData(city);
     showForecastData(city);
     showDailyForecastData(city);
     showParametersData(city);
+
+    // Armazenar a cidade atual no localStorage
+    try {
+        const storedCities = JSON.parse(localStorage.getItem('searchedCities')) || [];
+        // Adicionar a cidade atual à lista
+        storedCities.push(city);
+        // Armazenar a lista atualizada no localStorage
+        localStorage.setItem('searchedCities', JSON.stringify(storedCities));
+    } catch (error) {
+        console.error('Erro ao armazenar a cidade no localStorage:', error);
+    };
 });
 
-window.addEventListener('load', loadDefaultCityData);
-
-  
+// Evento de carga da página
+window.addEventListener('load', async () => {
+    await loadCityData();
+});
