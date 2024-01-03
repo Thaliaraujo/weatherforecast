@@ -9,7 +9,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    
+
     padding: 1rem 0 0 1.2rem;
     gap: 3rem;
     margin-bottom: 2rem;
@@ -23,14 +23,16 @@
 
 .segmentControl__list{
     display: flex;
-    align-items: flex-start;
+    overflow-x: auto;
     gap: .75rem;
+    width: 90vw;
 }
 
 .segmentControl__item{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    flex-shrink: 0;
     margin-top: .5rem;
 }
 
@@ -40,8 +42,8 @@
     justify-content: center;
     align-items: center;
 
-    width: 3.7rem;
-    padding: 1rem .5rem;
+    min-width: 5rem;
+    padding: 2rem .5rem;
     gap: 1rem;
 
     border-radius: 1.8rem;
@@ -52,7 +54,7 @@
 
 .segmentControl__item--content p {
     font-size: .9rem;
-    line-height: 1.25rem; 
+    line-height: 1.25rem;
     letter-spacing: -0.03125rem;
 }
 
@@ -75,12 +77,12 @@
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
-    
+
     width: 7.5rem;
     height: 7.5rem;
     padding-top: .5rem;
     gap: 1rem;
-    
+
     border-radius: 1.4rem;
     border: 1px solid var(--purple);
     background: linear-gradient(168deg, #2E335A 1.62%, #1C1B33 95.72%);
@@ -103,7 +105,7 @@
 }
 
 .sunrise{
-    background-image: url(../images/sunrise-fill.svg); 
+    background-image: url(../images/sunrise-fill.svg);
 }
 
 .sunset{
@@ -113,23 +115,57 @@
 }
 
 .rain{
-    background-image: url(../images/rain-fill.svg); 
+    background-image: url(../images/rain-fill.svg);
 }
 
 .humidity{
-    background-image: url(../images/humidity-fill.svg); 
+    background-image: url(../images/humidity-fill.svg);
 }
 
 .cloudiness{
-    background-image: url(../images/cloud-haze-fill.svg); 
+    background-image: url(../images/cloud-haze-fill.svg);
 }
 
 .wind{
-    background-image: url(../images/wind-fill.svg); 
+    background-image: url(../images/wind-fill.svg);
 }
 
 .modalContainer__widgets--itemParameter{
     font-weight: 100;
     line-height: 1rem;
     letter-spacing: .1rem;
+}
+
+
+@media screen and (min-width: 550px) {
+    .segmentControl__list{
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .segmentControl--title{
+        font-size: 1.5rem;
+    }
+
+    .segmentControl__list{
+        gap: 1.2rem;
+    }
+
+    .segmentControl__item--content{
+        min-width: 6rem;
+        padding: 2.5rem .5rem;
+    }
+    
+    .segmentControl__item--content p {
+        font-size: 1.3rem;
+    }
+    
+    .segmentControl__item--content img {
+        width: 3rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
 }
